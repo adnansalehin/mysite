@@ -10,7 +10,7 @@ def index(request):
 
 
 def detail(request, question_id):
-    question = get_object_or_404(Question, question_id)
+    question = get_object_or_404(Question, pk=question_id)
     context = {'question': question}
     return render(request, 'polls/detail.html', context)
 
